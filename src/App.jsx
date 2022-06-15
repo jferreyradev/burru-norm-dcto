@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import InputBox from './components/InputBox';
 
 import Docxtemplater from 'docxtemplater';
 import PizZip from 'pizzip';
@@ -87,10 +88,7 @@ function App() {
 
   return (
     <div className="App">
-      <input type="date" defaultValue='2022-6-9' />
-      <label>Lugar:</label>
-      <input type="text"></input>
-      <input type="file" onChange={e => handleFile(e)} />
+      <InputBox />
       <button onClick={generateDocument} >Generar docx</button>
     </div>
   )
